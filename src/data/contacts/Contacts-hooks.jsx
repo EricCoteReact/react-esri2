@@ -37,10 +37,15 @@ export default function Contacts() {
     }
   }
 
+  async function deleteContact(id) {
+    await ContactApi.deleteContact(id);
+    refreshData();
+  }
+
   return (
     <>
       <h1>Contacts (using Hooks)</h1>
-      <ContactTable contacts={contacts} />
+      <ContactTable contacts={contacts} onDelete={deleteContact} />
       <Link to='/data/details'>
         <Button color='primary'>Create Contact</Button>
       </Link>

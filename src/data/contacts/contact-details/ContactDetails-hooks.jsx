@@ -51,9 +51,15 @@ export default function ContactDetails(props) {
       formErrors.firstName = `First name needs three letters or more (${state.firstName})`;
     }
 
+    if (state.firstName.length > 15) {
+      formErrors.firstName = `First name is too long (${state.firstName})`;
+    }
+
     if (state.lastName.length < 3) {
       formErrors.lastName = 'Last name needs three letters or more';
     }
+
+
 
     if (!isEquivalent(state.formErrors, formErrors)) {
       setState({ ...state, formErrors });
