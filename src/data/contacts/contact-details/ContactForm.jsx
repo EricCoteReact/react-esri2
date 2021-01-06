@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form, Input, Button, FormGroup } from 'reactstrap'; //Alert
+import { Form, Input, Button, FormGroup, Alert } from 'reactstrap'; //Alert
 import MyTextBox from './MyTextbox';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faTrashAlt  } from "@fortawesome/free-solid-svg-icons";
@@ -39,12 +39,12 @@ export default function ContactForm(props) {
       />
 
       <FormGroup>
-        {/* {
-            props.formErrors.global ? 
+        {
+          props.formErrors.global ?
             <Alert color="danger">
               {props.formErrors.global}
-            </Alert> 
-            : ""}  */}
+            </Alert>
+            : ""}
         <Button color='primary'>Submit Contact</Button>
 
         {/* <Button className="ml-3" color="danger"
