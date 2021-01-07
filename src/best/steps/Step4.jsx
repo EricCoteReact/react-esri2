@@ -1,8 +1,8 @@
 import React from 'react';
-import Cat from '../Cat';
+//import Cat from '../Cat';
 //import withCat from '../with-cat';
 
-const ParentRoot = withMouse(Cat);
+const ParentRoot = withMouse(DisplayMouse);
 export default ParentRoot;
 
 //This is a HOC, a higher-order component.

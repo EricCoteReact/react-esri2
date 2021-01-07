@@ -13,7 +13,7 @@ class DisplayMouse extends React.Component {
   };
 
   render() {
-    const { x, y } = this.state;
+    //const { x, y } = this.state;
     return (
       <div style={{ height: '500px' }} onMouseMove={this.handleMouseMove}>
         <Cat mouse={this.state}></Cat>
