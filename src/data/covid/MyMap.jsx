@@ -6,7 +6,7 @@ import { loadModules } from 'esri-loader';
 
 let view;
 
-export const MyMap = ({ lat = 34, long = -118 }) => {
+export const MyMap = ({ lat = 34, long = -118, onCountryChange }) => {
   const mapRef = useRef();
 
   useEffect(() => {
@@ -23,6 +23,7 @@ export const MyMap = ({ lat = 34, long = -118 }) => {
           map: map,
           center: [-118, 34],
           zoom: 4,
+
         });
 
         return () => {

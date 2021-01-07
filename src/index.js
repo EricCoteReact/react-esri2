@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './common/App';
+import App from './common/animated-app';
 import reportWebVitals from './common/reportWebVitals';
 
 ReactDOM.render(<App />, document.getElementById('root'));

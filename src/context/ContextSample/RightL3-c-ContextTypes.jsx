@@ -18,6 +18,13 @@ export default class ModifyDataContextTypes extends React.Component {
           className='mb-4'
         />
         <Input
+          value={ctx.lastName}
+          name='lastName'
+          placeholder='Last Name'
+          onChange={ctx.onChange}
+          className='mb-4'
+        />
+        <Input
           value={ctx.color}
           name='color'
           placeholder='Color'

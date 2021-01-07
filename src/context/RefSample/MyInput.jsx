@@ -11,7 +11,7 @@ const MyInput = (props) => {
   );
 };
 
-export default MyInput;
+export default React.forwardRef((props, ref) => MyInput({ ...props, ref }));
 
 //comment previous, uncomment next line
 //export default React.forwardRef((props, ref) => MyInput({ ...props, ref }));

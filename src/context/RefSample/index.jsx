@@ -4,7 +4,7 @@ import MyInput from './MyInput';
 
 export default function RefSample(props) {
   const [theState, setTheState] = useState('Controlled component');
-  //const myRef1 = React.createRef();
+  const myRef1 = React.createRef();  // {current: <input />}
   const myRef2 = React.createRef();
 
   function change(evt) {
@@ -16,9 +16,9 @@ export default function RefSample(props) {
   }
 
   function showRef1() {
-    alert(`The reference is: ${document.getElementById('id1').value}`);
+    // alert(`The reference is: ${document.getElementById('id1').value}`);
     //comment previous, uncomment next line
-    //alert(`The reference is: ${myRef1.current.value}`);
+    alert(`The reference is: ${myRef1.current.value}`);
   }
 
   function showRef2() {
@@ -37,12 +37,12 @@ export default function RefSample(props) {
 
       <div>
         <h4>Using Reference</h4>
-        <input
+        <Input
           type='text'
           className='form-control'
-          id='id1' //Every id should be unique on a page. Is that the case?
+          //Every id should be unique on a page. Is that the case?
           //comment previous, uncomment next line
-          //ref={myRef1}
+          innerRef={myRef1}
           defaultValue='Uncontrolled component'
         />
         <Button onClick={showRef1} color='primary' className='mt-2 mb-4'>

@@ -16,6 +16,13 @@ export default function ModifyDataHooks() {
         className='mb-4'
       />
       <Input
+        value={ctx.lastName}
+        name='lastName'
+        placeholder='Last Name'
+        onChange={ctx.onChange}
+        className='mb-4'
+      />
+      <Input
         value={ctx.color}
         name='color'
         placeholder='Color'

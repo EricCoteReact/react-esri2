@@ -6,9 +6,10 @@ import { Input } from 'reactstrap';
 
 export default function SimpleContainment() {
   const [firstName, setFirstName] = useState('John');
+  const [lastName, setLastName] = useState('Wayne');
   const [color, setColor] = useState('blue');
 
-  const displayData = <h1 style={{ color: color }}>The name is {firstName}</h1>;
+  const displayData = <h1 style={{ color: color }}>The name is {firstName} {lastName}</h1>;
 
   const modifyData = (
     <>
@@ -17,6 +18,13 @@ export default function SimpleContainment() {
         name='firstName'
         placeholder='First Name'
         onChange={(evt) => setFirstName(evt.target.value)}
+        className='mb-4'
+      />
+      <Input
+        value={lastName}
+        name='lastName'
+        placeholder='Last Name'
+        onChange={(evt) => setLastName(evt.target.value)}
         className='mb-4'
       />
       <Input

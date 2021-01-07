@@ -10,11 +10,11 @@ export default function Contacts() {
 
   React.useEffect(() => {
     refreshData();
-    //  if (ContactApi.subscribeChangeNotification) {
-    //    ContactApi.subscribeChangeNotification(refreshData)
-    //  }
+    if (ContactApi.subscribeChangeNotification) {
+      ContactApi.subscribeChangeNotification(refreshData)
+    }
 
-    // return ()=> {ContactApi.unsubscribeChangeNotification()}
+    return () => { ContactApi.unsubscribeChangeNotification() }
   }, []);
 
   // This is the old way of calling data
