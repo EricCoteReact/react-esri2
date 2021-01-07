@@ -1,9 +1,13 @@
 import React, { useState, useEffect /*, useRef */ } from 'react';
-//import Cat from '../Cat';
+import Cat from '../Cat';
 
 export default function ParentRoot() {
   const mouse = useMouse();
-  return <DisplayMouse mouse={mouse} />;
+  return (
+    <>
+      <Cat mouse={mouse} />
+      <DisplayMouse mouse={mouse} />
+    </>);
 }
 
 function useMouse(div) {

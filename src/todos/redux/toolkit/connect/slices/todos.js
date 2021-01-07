@@ -23,9 +23,14 @@ const todos = createSlice({
         todo.completed = !todo.completed;
       }
     },
+
+    deleteTodo: (state, action) => {
+      const index = state.find((todo) => todo.id === action.payload);
+      state.splice(index, 1);
+    },
   },
 });
 
 export default todos;
 
-export const { addTodo, editTodo, toggleTodo } = todos.actions;
+export const { addTodo, editTodo, toggleTodo, deleteTodo } = todos.actions;

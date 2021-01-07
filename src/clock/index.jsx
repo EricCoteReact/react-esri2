@@ -18,7 +18,7 @@ function getDay() {
   return new Intl.DateTimeFormat('en-CA', options).format(new Date());
 }
 
-export default class Clock extends React.Component {
+export default class Clock extends React.PureComponent {
   state = {
     time: getTime(),
   };
@@ -27,9 +27,9 @@ export default class Clock extends React.Component {
 
   startTimer = () => {
     this.timerRef = setInterval(() => {
-      //console.log('tick');
+
       this.setState({ time: getTime() });
-    }, 1000);
+    }, 0);
 
     // this.setState({time: getTime()});
   };
@@ -48,23 +48,23 @@ export default class Clock extends React.Component {
   };
 
   // shouldComponentUpdate(nextProps, nextState) {
-  //     if (nextState.time !== this.state.time) {
-  //         return true;
-  //     } else {
-  //         return false;
-  //     }
+  //   if (nextState.time !== this.state.time) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
   // }
 
   // componentDidUpdate(){
   //     console.log("tick");
   // }
 
-  // componentWillUnmount = () => {
-  //     this.stopTimer();
-  // }
+  componentWillUnmount = () => {
+    this.stopTimer();
+  }
 
   render = () => {
-    //console.log(this.state.time);
+    console.log(this.state.time);
     return (
       <div>
         <Button color='primary' onClick={this.timerToggler}>

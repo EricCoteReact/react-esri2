@@ -1,5 +1,5 @@
 import React from 'react';
-//import Cat from '../Cat';
+import Cat from '../Cat';
 
 export default function ParentRoot() {
   return <MouseProvider />;
@@ -15,7 +15,7 @@ class MouseProvider extends React.Component {
   render() {
     return (
       <div style={{ height: '500px' }} onMouseMove={this.handleMouseMove}>
-        <DisplayMouse mouse={this.state} />
+        <Dymamic mouse={this.state} />
       </div>
     );
   }

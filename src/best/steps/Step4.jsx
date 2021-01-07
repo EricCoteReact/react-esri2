@@ -1,8 +1,8 @@
 import React from 'react';
-//import Cat from '../Cat';
+import Cat from '../Cat';
 //import withCat from '../with-cat';
 
-const ParentRoot = withMouse(DisplayMouse);
+const ParentRoot = withMouse(Cat);
 export default ParentRoot;
 
 //This is a HOC, a higher-order component.
@@ -23,9 +23,8 @@ function withMouse(Component) {
     }
   }
   //convention to help with HOC debugging
-  WithMouse.displayName = `WithMouse(${
-    Component.displayName || Component.name || 'Component'
-  })`;
+  WithMouse.displayName = `WithMouse(${Component.displayName || Component.name || 'Component'
+    })`;
   return WithMouse;
 }
 
